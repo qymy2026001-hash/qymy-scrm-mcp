@@ -1,0 +1,25 @@
+{
+  "name": "qymy-scrm-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "typecheck": "wrangler types && tsc --noEmit",
+    "cf-typegen": "wrangler types",
+    "mock:chatwoot": "node scripts/mock-chatwoot.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@modelcontextprotocol/server": "2.3.1",
+    "agents": "0.31.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "7.0.2",
+    "vitest": "5.1.0",
+    "wrangler": "4.158.0"
+  }
+}

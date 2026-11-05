@@ -1,0 +1,15 @@
+# Copy to .dev.vars for `wrangler dev`. Never commit .dev.vars.
+# These placeholders are not real credentials.
+
+# Bearer token Cursor / Claude send to this Worker.
+MCP_ACCESS_TOKEN=replace-with-a-long-random-token
+
+# Chatwoot origin only, no path and no token. Example shape: https://scrm.example.com
+# The local mock listens on http://127.0.0.1:4010
+CHATWOOT_BASE_URL=http://127.0.0.1:4010
+
+# Chatwoot user API token from Profile Settings (Application API).
+CHATWOOT_ACCESS_TOKEN=replace-with-chatwoot-user-api-token
+
+# Numeric Chatwoot account id used in /api/v1/accounts/{account_id}/...
+CHATWOOT_ACCOUNT_ID=1

@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "qymy-scrm-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-05",
+  "compatibility_flags": ["nodejs_compat"],
+  // Internal, low-volume Worker. Keep traces sampled at 1 until traffic grows.
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    }
+  },
+  // Names only. Values come from `wrangler secret put` or local `.dev.vars`.
+  "secrets": {
+    "required": [
+      "MCP_ACCESS_TOKEN",
+      "CHATWOOT_BASE_URL",
+      "CHATWOOT_ACCESS_TOKEN",
+      "CHATWOOT_ACCOUNT_ID"
+    ]
+  }
+}
