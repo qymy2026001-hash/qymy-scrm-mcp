@@ -1,0 +1,1 @@
+# qymy-scrm-mcp
